@@ -50,3 +50,40 @@ class Program
     }
 }
 
+
+// The example below follows the Liskov substitution method perfectly. 
+// Not only can the derived class object be used in place of the base class, but in addition to the use of polymorphism, 
+// we do not overwrite the base class methods, we only use them.
+class CoffeeMachine
+{
+    public virtual void Brew()
+    {
+        Console.WriteLine("Pour coffee to the cup");
+        Console.WriteLine("Pour water to the cup");
+    }
+}
+
+class CoffeeLatteMachine : CoffeeMachine
+{
+    public override void Brew()
+    {
+        base.Brew();
+        Console.WriteLine("Pour milk to the cup");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        CoffeeMachine coffee;
+        
+        Console.WriteLine("Making normal coffee");
+        coffee = new CoffeeMachine();
+        coffee.Brew();
+        
+        Console.WriteLine("Making latte coffee");
+        coffee = new CoffeeLatteMachine();
+        coffee.Brew();
+    }
+}
