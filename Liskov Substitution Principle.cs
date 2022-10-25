@@ -25,7 +25,7 @@ class Dog : Animal
 {
     public override void Run()
     {
-        Console.WriteLine("Dog runs");
+        Console.WriteLine( "Dog runs" );
     }
 }
 
@@ -33,7 +33,7 @@ class Fish : Animal
 {
     public override void Run()
     {
-        throw new NotImplementedException("Fish can not run!"); 
+        throw new NotImplementedException( "Fish can not run!" ); 
     }
 }
 
@@ -43,10 +43,10 @@ class Program
     {
         List<Animal> animals = new List<Animal>();
         
-        animals.Add(new Dog());
-        animals.Add(new Fish());
+        animals.Add( new Dog() );
+        animals.Add( new Fish() );
         
-        animals.ForEach(o => o.Run());
+        animals.ForEach( o => o.Run() );
     }
 }
 
@@ -58,8 +58,8 @@ class CoffeeMachine
 {
     public virtual void Brew()
     {
-        Console.WriteLine("Pour coffee to the cup");
-        Console.WriteLine("Pour water to the cup");
+        Console.WriteLine( "Pour coffee to the cup" );
+        Console.WriteLine( "Pour water to the cup" );
     }
 }
 
@@ -68,7 +68,7 @@ class CoffeeLatteMachine : CoffeeMachine
     public override void Brew()
     {
         base.Brew();
-        Console.WriteLine("Pour milk to the cup");
+        Console.WriteLine( "Pour milk to the cup" );
     }
 }
 
@@ -78,11 +78,11 @@ class Program
     {
         CoffeeMachine coffee;
         
-        Console.WriteLine("Making normal coffee");
+        Console.WriteLine( "Making normal coffee" );
         coffee = new CoffeeMachine();
         coffee.Brew();
         
-        Console.WriteLine("Making latte coffee");
+        Console.WriteLine( "Making latte coffee" );
         coffee = new CoffeeLatteMachine();
         coffee.Brew();
     }
