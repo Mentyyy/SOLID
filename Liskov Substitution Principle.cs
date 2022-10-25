@@ -5,10 +5,10 @@ Rule: "Functions that use pointers or references to base classes must be able to
 
 
 The Liskov substitution principle is most often broken in the following cases:
-    - when the developer has mismanaged the inheritance mechanism, the polymorphic interface is too general,
     - inheritance without polymorphism
+    - when the polymorphic interface is too general
     - derived classes override the base class's methods by replacing its mismatched logic
-        - In a well-planned inheritance mechanism, derived classes should extent, not override the methods of the base classes. 
+        - in a well-planned inheritance mechanism, derived classes should extent, not override the methods of the base classes 
           
           
 In the example below, we've created the Animal abstraction, but there is a poorly thought inheritance mechanism. 
