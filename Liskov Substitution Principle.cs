@@ -51,7 +51,7 @@ class Program
 }
 
 
-// The example below follows the Liskov substitution method perfectly. 
+// The example below follows the Liskov's substitution method perfectly. 
 // Not only can the derived class object be used in place of the base class, but in addition to the use of polymorphism, 
 // we do not overwrite the base class methods, we only use them.
 class CoffeeMachine
