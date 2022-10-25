@@ -1,7 +1,7 @@
 /*
 Rule: "Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it."
-IOW: We can always use any derived class in place of the base class.
-or: Inheritance should be planned so that each derived class can use the functions of the base class.
+    IOW: We can always use any derived class in place of the base class.
+    or: Inheritance should be planned so that each derived class can use the functions of the base class.
 
 
 The Liskov substitution principle is most often broken in the following cases:
