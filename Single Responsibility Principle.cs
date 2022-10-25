@@ -32,7 +32,6 @@ class Person
 }
 
 //To avoid refactoring or code duplication the stucture could look like this:
-
 class Address
 {
     public string City { get; set; }
