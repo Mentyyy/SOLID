@@ -61,7 +61,7 @@ class EmailValidator
     {
         return email;
     }
-    public void ThrowException()
+    public void ThrowException(string email)
     {
         if( !email.Contains( "@" ) || !email.Contains( "." ))
         {
@@ -69,5 +69,3 @@ class EmailValidator
         }   
     }
 }
-
-
