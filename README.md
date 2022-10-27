@@ -1,4 +1,4 @@
-SOLID rules are not 100% about apllying them. 
+SOLID is not 100% about applying the rules. 
 
 Because, as you will see many times, you will be forced to break them or it may turn out that the rules will conflict with each other. 
 
