@@ -2,6 +2,10 @@
 Rule: Many dedicated interfaces are better than one too general.
 IOW: Interfaces should be specific and as small as possible. Don't create interface with unused methods.
 
+    "In C++ programming there is no built-in concept of interfaces. In order to create an interface, 
+     we need to create an abstract class which is having only pure virtual methods. 
+     In C++, Interfaces are also called pure abstract classes."
+
 
 The code below is incorrect because not every interface-defined method is used in derived classes.
 */
