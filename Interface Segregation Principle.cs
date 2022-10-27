@@ -1,4 +1,79 @@
 /*
 Rule: Many dedicated interfaces are better than one too general.
 IOW: Interfaces should be specific and as small as possible. Don't create interface with unused methods.
+
+
+The code below is incorrect because not every interface-defined method is used in derived classes.
+*/
+interface IRaportable
+{
+    void PrintPdf();
+    void PrintExcel();
+}
+
+class SalaryRaport : IRaportable
+{
+    public void PrintPdf()
+    {
+        // print pdf
+    }
+    
+    public void PrintExcel()
+    {
+        // print excel
+    }
+}
+
+class HighSchoolExam : IRaportable
+{
+    public void PrintPdf()
+    {
+        // print Pdf here
+    }
+    
+    public void PrintExcel()
+    {
+        throw new NotImplementedException();
+    }
+}
+
+// Besides of the main IRaportable interface we should've create multiple smaller interfaces.
+interface IPrintablePdf
+{
+    void PrintPdf();
+}
+
+interface IPrintableExcel
+{
+    void PrintExcel();
+}
+
+class SalaryRaport : IPrintablePdf, IPrintableExcel
+{
+    public void PrintPdf()
+    {
+        // print pdf
+    }
+    
+    public void PrintExcel()
+    {
+        // print excel
+    }
+}
+
+class HighSchoolExam : IPrintablePdf
+{
+    public void PrintPdf()
+    {
+        // print Pdf here
+    }
+}
+
+/*
+If we look at the interfaces built into C#, we'll see that most of them implement one or two methods:
+    IEquatable - 1 
+    ICloneable - 1 
+    IComparable - 1 
+    IEnumerable - 1 
+    IIterator - 2 
 */
