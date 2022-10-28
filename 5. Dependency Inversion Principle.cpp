@@ -42,11 +42,11 @@ private:
     bool m_open = false;
 };
 
-
-// If the player wants to interact with other objects in the game we'll need to write a separate method for every new object.
-// Correct implementation: 
-//      The Player class will now only need to know the InteractiveObject interface.
-
+/*
+If the player wants to interact with other objects in the game we'll need to write a separate method for every new object.
+Correct implementation: 
+      The Player class will now only need to know the InteractiveObject interface.
+*/
 class InteractiveObject
 {
 public:
@@ -90,7 +90,6 @@ private:
 
 
 // Same problem with templates:
-
 class Player
 {
 public:
